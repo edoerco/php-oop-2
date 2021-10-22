@@ -1,21 +1,28 @@
-<!-- Classe figlio -->
-
 <?php 
+    // Classe figlio
 
     require_once 'user.php';
+
 
     class UserPremium extends User {
 
         public $discount;
         public $giftCard;
 
-        public function __construct($_discount, $_giftCard)
-        {
-        $this->discount = $_discount;
-        $this->giftCard = $_giftCard;
+        public function getDiscount(){
+            return $this->discount;
+        }
+
+        public function setDiscount($_discount){
+            $this->discount = $_discount;
+        }
+
+        public function getGiftCard(){
+            return $this->giftCard;
+        }
+
+        public function setGiftCard($_giftCard){
+            $this->giftCard = $_giftCard;
         }
     } 
-
-    $edo = new UserPremium(20, 'aa11bb22cc33')
-
 ?>
